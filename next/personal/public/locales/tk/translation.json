@@ -1,0 +1,11 @@
+{
+  "sideBarContainer": {
+    "inventory": "envanter",
+    "payment": "ödeme",
+    "Factors":"Faktörler",
+    "tickets":"biletler"
+  },
+  "header": {
+
+  }
+}

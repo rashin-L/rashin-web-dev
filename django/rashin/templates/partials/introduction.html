@@ -1,0 +1,140 @@
+{% load static %}
+
+<div dir="ltr" class="max-w-[95%]  ">
+    {% if Intro %}
+    <div  class=" ">          
+        <!-- left -->
+        <div class=" grow md:mt-10  relative dark:m-0">
+            <span class=" mt-12 inline-block font-OpenSansSemiBold text-sm text-light-blue dark:text-white">Hi
+                i'am</span>
+            <h1 class=" font-OpenSansExtraBold text-4xl text-light-blue dark:text-white">Rashin <span
+                    class=" text-blue-500 dark:text-dark-blue">Latify</span> </h1>
+            <p class=" mb-3 max-w-[90%] text-justify mt-3 font-OpenSansRegular text-sm text-light-blue dark:text-white">
+                    {{Intro.description}}                
+            </p>
+            
+                
+        </div>
+
+    </div>
+    {% else %}
+
+    {% comment %} <h1 class=" animate__animated animate__heartBeat text-5xl text-center  font-RobotoRegular text-blue-500 dark:text-dark-blue">Convert your CV to a awesome website simply!</h1> {% endcomment %}
+    
+
+<div class=' items-center   bg-gradient-to-br'>
+    <div class="relative w-full ">
+        <div class="absolute-center">
+            <svg class="circle-svg" viewBox="0 0 500 500">
+                <defs>
+                    <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+                        id="textcircle_top">
+                        <animateTransform attributeName="transform" begin="0s" dur="20s" type="rotate" from="0 250 250"
+                            to="360 250 250" repeatCount="indefinite" />
+                    </path>
+                </defs>
+                <text class="circle-text" dy="70" textLength="1220">
+                    <textPath xlink:href="#textcircle_top">
+                        Convert your CV to a awesome website simply!
+
+                    </textPath>
+                    
+                </text> 
+            </svg>
+            
+        </div>
+        <div class="absolute-center">
+            <div class="showreels-div">
+                <video class="showreels-video object-cover" loop autoplay muted>
+                    
+                    {% comment %} <source src='https://github.com/ahampriyanshu/gfg/raw/main/media/showreel.mp4' type="video/mp4" /> {% endcomment %}
+                    {% comment %} <source src='https://github.com/rashin-L/personal-web/raw/main/introduction.mp4' type="video/mp4" /> {% endcomment %}
+                    <source src='static/media/view.mp4' type="video/mp4" />
+                    <p>Please Update Your Browser</p>
+                </video>
+                <img
+                    alt="play"
+                    class="showreels-btn"
+                    src='https://github.com/ahampriyanshu/gfg/raw/main/media/play.png'
+                />
+            </div>
+                {% comment %} <a class=" text-blue-500 dark:text-dark-blue text-3xl relative top-14 font-OpenSansSemiBold left-15" href="http://127.0.0.1:8000/admin/">start</a> {% endcomment %}
+                <div
+            class="start rounded-full bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg  text-center   md:mt-0 w-[7.6rem] h-[2.4rem]  md:w-32 md:h-10">
+            <a href="http://127.0.0.1:8000/admin/" class=" z-20 align-[-webkit-baseline-middle]   text-white font-RobotoRegular text-sm md:align-[-webkit-baseline-middle]  md:text-base font-bold" href="{% url 'main:download_cv' %}" >Start</a>
+            <button  data-collapse-toggle="navbar-sticky" type="button" class="  flex  p-4 relative -left-3 text-sm text-gray-500 rounded-lg md:hidden  " aria-controls="navbar-sticky" aria-expanded="false">
+                <span  class="sr-only relative -left-12">Open main menu</span>
+                <svg  class="w-6 h-6 " aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+        </div>  
+                
+                {% comment %} <a href="http://127.0.0.1:8000/admin/" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5  relative top-14 ri dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Start</a> {% endcomment %}
+        </div>
+    </div>
+</div>
+<style>
+        .showreels-btn {
+        width: 25%;
+        height: 25%;
+        display: block;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 55%;
+        -ms-transform: translate(-55%, -50%);
+        transform: translate(-55%, -50%);
+    }
+    
+    .showreels-div:hover .showreels-video {
+        display: block;
+    }
+    
+    .showreels-div:hover .showreels-btn {
+        display: none;
+    }
+    
+        .circle-text {
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        fill: #333;
+    }
+    
+    .showreels-div {
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
+        top: 1rem;
+    position: relative;
+    }
+    .start{
+        left: 5rem;
+        top: 5rem;
+        position: relative;
+    }
+    
+    .showreels-video {
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        display: none;
+        
+    }
+    
+        .circle-svg {
+        height: 600px;
+        width: 600px;
+    }
+    .absolute-center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+ 
+</style>
+{% endif %}
+
+</div>

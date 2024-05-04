@@ -1,0 +1,27 @@
+{% load static %}
+
+
+
+
+{% comment %} change-theme {% endcomment %}
+
+<a class="absolute top-3 right-3 z-40" href="{% url 'change-theme' %}">
+{% if is_dark_theme %}
+<svg class=" inline-block   w-8 h-8  text-white   ">
+    <use xlink:href="#moon"></use>
+</svg>
+{% else %}
+<svg class=" inline-block w-8 h-8  text-white   ">
+    <use xlink:href="#sun"></use>
+</svg>
+{% endif %}
+</a> 
+
+{% if edit_intro_img %}
+
+<div style="background-image: url({% static edit_intro_img %} );"  class="   bg-no-repeat bg-cover bg-center backdrop-blur-sm rounded-[15rem] rounded-tr-lg rounded-bl-[20rem]  absolute -right-[1rem] -top-[3rem]
+    w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem]  ">
+</div>
+{% endif %}
+{% comment %} {{Intro.main_img}} {% endcomment %}
+

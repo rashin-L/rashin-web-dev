@@ -1,0 +1,28 @@
+{% comment %} footer {% endcomment %}
+{% if social_media %}
+<div   class="  max-w-[90%]  mx-auto mt-14">
+    
+
+
+
+    <div class="pb-16 gap-5 flex  justify-center">
+        <a title="Google, Public domain, via Wikimedia Commons" href= mailto:{{social_media.email}} >
+            <img width="32" alt="Gmail icon (2020)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/32px-Gmail_icon_%282020%29.svg.png">
+        </a>
+        <a target=”_blank” title="GitHub, MIT &lt;http://opensource.org/licenses/mit-license.php&gt;, via Wikimedia Commons" href={{social_media.gitHub}}>
+            <img width="32" alt="Octicons-mark-github" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/64px-Octicons-mark-github.svg.png">
+            
+        </a>
+        <a target=”_blank” title="LinkedIn, Public domain, via Wikimedia Commons" href={{social_media.linkedin}}>
+            <img width="32" alt="LinkedIn logo initials" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/64px-LinkedIn_logo_initials.png">
+            
+        </a>
+
+
+
+    </div>
+
+    
+</div>
+
+{% endif %}

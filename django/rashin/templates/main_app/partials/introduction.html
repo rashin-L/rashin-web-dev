@@ -1,0 +1,25 @@
+
+<div dir="rtl" class=" max-w-[95%] "> 
+    {% if Intro %}
+    <div >
+        <div  class="  ">          
+            <!-- left -->
+            {% comment %} <div class=" grow md:mt-20 left-0 min-[837px]:order-2 relative overflow-hidden w-[15rem] h-[15rem] sm:w-[20rem] sm:h-[20rem]   xl:w-[35rem] xl:h-[35rem]  "> {% endcomment %}
+            <div class=" flex flex-col text-center ">
+                <span class=" inline-block font-OpenSansSemiBold text-sm text-light-blue dark:text-white">Hi
+                    i'am</span>
+                <h1 class="animate__animated animate__bounceIn font-OpenSansExtraBold text-4xl text-light-blue dark:text-white">{{Intro.first_name}} <span
+                        class=" text-blue-500 dark:text-dark-blue">{{Intro.last_name}} </span> </h1>
+                <p class="   row-span-2 mb-8 max-w-[90%] text-justify mt-3 font-OpenSansRegular text-sm text-light-blue dark:text-white">
+                        {{Intro.description}}                
+                </p>
+                
+                    
+            </div>
+    
+        </div>
+    </div> 
+    {% else %}
+    <h3>hhhhhhhhhhhh</h3>
+    {% endif %}      
+</div>

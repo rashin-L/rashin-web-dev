@@ -1,0 +1,47 @@
+{% extends 'main_template.html' %}
+{% load static %}
+{% load render_partial %}
+
+{% block left %}
+
+<div class="  relative py-3 lg:-top-20 max-w-xs md:max-w-xl sm:mx-auto m-auto ">
+    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-sky-500 shadow-lg transform  skew-y-0 -rotate-6 rounded-3xl"></div>
+        <div class="relative px-4 py-10 bg-white shadow-lg rounded-3xl ">
+            <div class="max-w-md mx-auto">
+                <div>
+                    <h1 class="text-2xl font-OpenSansBold text-l text-light-blue  ">Contact Me</h1>
+                </div>
+                <div class="divide-y divide-gray-200">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="pt-6 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7  child:font-RobotoRegular text-l child:text-white child:md:text-light-blue child:md:dark:text-white  ">
+                            <div class="flex gap-1 w-full  justify-between">
+                                <div class="relativeA ">
+                                    <input autocomplete="off" id="first_name" name="first_name" type="text" class="rounded-[1.25rem] h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-y-cyan-400" placeholder="First Name" />
+                                </div>
+                                <div class="relative">
+                                    <input autocomplete="off" id="last_name" name="last_name" type="text" class="rounded-[1.25rem] h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-y-cyan-400" placeholder="Last Name" />
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <input autocomplete="off" id="email" name="email" type="text" class=" rounded-[1.25rem] h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-y-cyan-400" placeholder="Email address" />
+                            </div>
+                            
+                            <div class="relative">
+                                <input autocomplete="off" id="subject" name="subject" type="text" class=" rounded-[1.25rem] h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-y-cyan-400" placeholder="Subject" />
+                            </div>
+                            <div class="relative">
+                                <textarea rows="4" cols="50"  autocomplete="off" id="message" name="message" type="text" class=" rounded-[1.25rem]  w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-y-cyan-400" placeholder="Message"  ></textarea>
+                            </div>
+                            <div class="relative"> 
+                                <button class="bg-cyan-500 text-white rounded-md px-2 py-1">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock left %}

@@ -1,0 +1,69 @@
+{% load render_partial %}
+{% if project_info %}
+<div class=" max-w-[90%]  mx-auto mt-14">
+    <h2 class="text-light-blue mb-8 dark:text-white text-3xl font-OpenSansBold">My <span
+        class="text-blue-500 dark:text-dark-blue">Awesome</span> Projects</h2>
+
+    {% for project in project_info %}
+    <div class="flex justify-between flex-wrap align-baseline mb-16" >
+        <img class="animate__animated project_img scale-100  w-full sm:w-[50%]" src="{{project.main_img}}" alt="{{project.project_name}}">
+
+        <div class="w-full md:w-[40%] child: font-OpenSansSemiBold text-light-blue  dark:text-white ">
+
+            <p class=" inline mb-3 font-OpenSansBold text-2xl text-blue-500 dark:text-dark-blue">
+                {{project.project_name}}|
+                <p class="inline mb-3 text-xs  ">
+                    {{project.start_date}} - {{project.end_date}}
+                </p>
+            </p>
+
+            <p class=" inline mb-3   ">
+                {{project.project_type}}|
+                <p class="inline mb-3 text-xs  ">
+                    {{project.short_description}} 
+                </p>
+                
+            </p>
+            {% if project.link %}
+            <a href="{{project.link}}">{{project.link}}</a>
+            {% endif %}
+            
+            {% if project.team_size|length > 0 %}
+            <p class="  ">
+                <span class="">team size :</span> 
+                {{project.team_size}}
+            </p>
+            {% endif %}
+            <p class="mb-3 mt-4">
+                <span class="font-OpenSansBold  mt-4 ">My function in the project.start_date</span> 
+                <span class=" line-clamp-2  block text-justify ">{{project.your_role_project.all|join:" و "}}</span> 
+            </p>
+            <div>
+                
+
+
+                <a href="{% url 'project_app:project_detail' project.slug %}"  class="transition ease-in-out delay-150 bg-white text-light-blue font-bold rounded border-b-2
+                    border-light-blue  hover:bg-light-blue
+                    dark:border-violet-200  dark:hover:bg-violet-200 dark:hover:text-light-blue
+                    hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                    <span class="mr-2">more detail</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentcolor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+    
+    {% endfor %}
+</div>
+{% endif %}
+
+
+
+
+
+
+{% comment %}  {% endcomment %}

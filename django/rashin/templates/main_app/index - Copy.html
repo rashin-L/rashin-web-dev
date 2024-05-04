@@ -1,0 +1,18 @@
+
+{% extends 'main_template.html' %}
+{% load render_partial %}
+{% load  tailwind_tags %}
+
+
+{% block left %}
+{% render_partial 'main:header'  %}
+{% endblock left %}
+
+
+{% block content %}
+
+{% render_partial 'service_app:service'  %}
+{% render_partial 'skill_app:skill'  %}
+{% include 'partials/footer.html' %}
+
+{% endblock content %}

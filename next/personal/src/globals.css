@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import './theme/theme.js'; */
+
+
+
+@layer base {
+
+    @font-face {
+        font-family: 'Barlow Regular';
+        src: local('Barlow Regular'), local('Barlow-Regular'),
+            /* url('../public/static/styles/fonts/Barlow/BarlowCondensed-Regular.ttf') format('woff2'); */
+            url('../public/fonts/Barlow/BarlowCondensed-Regular.ttf') format('ttf');
+
+    }
+}
+
+/* .swiper {
+    width: 100%;
+    height: 100%;
+} */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 0px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #1B80B7 !important;
+}
+
+/*
+\ .swiper-button-prev {
+    display: none !important;
+}
+
+.swiper-button-prev,
+ {
+    display: none !important;
+} */
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    top: 8rem !important;
+    display: none !important;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    /* left: 0rem; */
+    /* right: 3rem; */
+    top: 8rem !important;
+    display: none !important;
+}
+
+
+@media (min-width: 900px) {
+    .css-7jv4l8 {
+        width: 0;
+    }
+}
+
+.css-1lcldv5-MuiGrid-root {
+    margin-top: 0.5rem;
+}
+.css-bcv92z-MuiButtonBase-root-MuiListItemButton-root,  .MuiListItemButton-root{
+    padding: 0;
+    height: 1.5rem;
+}

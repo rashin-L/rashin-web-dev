@@ -1,0 +1,64 @@
+{% load faicon i18n %}
+
+    <!-- my skill -->
+    {% if skillGroup_info %}
+    <div class=" max-w-[90%]  mx-auto mt-14">
+        <div class=" pb-32">
+            <h2 id="skill" class="text-light-blue mb-4 dark:text-white text-3xl font-OpenSansBold">My <span
+                    class="text-blue-500 dark:text-dark-blue">Professional</span> Skills</h2>
+            <!-- progress -->
+            <div>
+                <div class=" flex justify-between  flex-wrap ">
+                    {% for group in skillGroup_info %}
+                    <div class=" w-full sm:w-[40%]">
+                        <h5 class=" font-RobotoBold mt-5 text-lg text-light-blue dark:text-white">
+                            {{group.title}}
+                        </h5>
+                        {% for skill in skill_info %}
+                        {% if skill.skill_group_id == group.id %}
+                        <div class='flex justify-between items-end mt-2'>
+                        
+                            {% if is_dark_theme %}
+                            <div class=''>
+                                <i class="fa-lg  {{skill.icon.style}} fa-{{skill.icon.icon}}" 
+                                style="color: #47D8E1;"></i> 
+                            </div>
+                            {% else %}
+                            <div class=''>
+                                <i class="fa-lg  {{skill.icon.style}} fa-{{skill.icon.icon}}" 
+                                style="color: #2563eb;"></i> 
+                            </div>
+                            {% endif %} 
+
+
+
+
+
+                            <div class='  w-[95%]'>
+                                <div class="">
+                                    
+                                    <div class="flex justify-between mb-1">
+                                    
+                                        <span class="text-base font-medium text-blue-700 dark:text-white">{{skill.title}}</span>
+                                        <span  class="skill_percent_text text-sm font-medium text-blue-700 dark:text-white">{{skill.percent}}%</span>
+                                    </div>
+                                    <div class=" w-full bg-gray-200 rounded-full h-2.5 dark:bg-white">
+                                        <div data-to="{{skill.percent}}" class="animate__animated skill_box skill_percent_fill bg-blue-600 dark:bg-dark-blue h-2.5 rounded-full" style="width: {{skill.percent}}%"></div>
+                                    </div>
+                                
+                                </div>
+                                
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+
+    

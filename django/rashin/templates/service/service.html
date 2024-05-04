@@ -1,0 +1,59 @@
+{% load static %}
+<!-- my service --> 
+{% if service_info %}
+<div class=" max-w-[90%]  mx-auto mt-14">
+    <h2 id="service" class="text-light-blue mb-4 dark:text-white text-3xl font-OpenSansBold">My <span
+            class="text-blue-500 dark:text-dark-blue">Awesome</span> Services</h2>
+    <div class=" flex flex-wrap gap-5 content-center flex-col sm:flex-row child: mb-3 font-OpenSansSemiBold text-light-blue  dark:text-white">
+        {% for service in service_info %}
+        {% comment %} <a
+            
+            class="mb-3 flex flex-col items-center bg-white/30 border border-gray-200 rounded-lg shadow xl:flex-row   hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="p-8 rounded-t-lg" src="{{service.main_img}}"  alt="service image" />
+            <div class="px-5 pb-5 max-w-[261px]">
+                <h5 class="text-xl font-semibold tracking-tight text-blue-500 dark:text-dark-blue ">
+                    {{service.title}}
+                </h5>
+                <p class="mb-3 font-normal  ">
+                    {{service.description}}
+                </p>
+            </div>
+        </a> {% endcomment %}
+
+
+        <a    
+            class="service_box animate__animated  mb-3  items-center bg-white/30 border border-gray-200 rounded-lg shadow xl:flex-row   hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <div class="flex flex-col px-5 pb-5 max-w-[324px]">
+                <h5 class="text-xl text-center mt-4 font-semibold tracking-tight text-blue-500 dark:text-dark-blue ">
+                    {{service.title}}
+                </h5>
+            <img width="335" height="249" class="p-8 rounded-t-lg" src="{{service.main_img}}"  alt="service image" />
+
+                <p class="mb-3 font-normal  ">
+                    {{service.description}}
+                </p>
+            </div>
+        </a>
+        {% endfor %}
+        
+
+    </div>
+</div>
+
+{% endif %}
+{% block script %}
+{% comment %} <script>
+    var skills = document.querySelectorAll('.service_box');
+    
+    
+    window.onscroll = (event) =>{
+        if (window.scrollY>=200) {
+            for (const box of skills) {
+                box.style.setProperty('--animate-duration', '2s');
+                box.classList.add('animate__backInRight');
+            }
+        }
+    }
+</script> {% endcomment %}
+    
+{% endblock script %}

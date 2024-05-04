@@ -1,0 +1,29 @@
+{% extends 'main_template.html' %}
+{% load render_partial %}
+
+
+{% block header %}
+<div class="col-span-2 h-auto  top-[15rem] max-w-[95%] ">
+    <div  class="flex justify-between h-auto  flex-nowrap ">
+        <!-- right -->  
+        <div class="  h-[17rem] w-[20rem] relative z-0 ">
+            {% comment %} {% render_partial 'main:main_img'  %}            {% endcomment %}
+        </div>
+
+        <div dir="ltr" class="   "> 
+            {% render_partial 'main:nav' %}
+        </div>
+    </div>
+{% render_partial 'main:introduction'  %}
+</div>
+{% endblock header %}
+
+
+{% block content %}
+
+{% render_partial 'service_app:service'  %}
+{% render_partial 'project_app:project'  %}
+{% render_partial 'skill_app:skill'  %}
+
+
+{% endblock content %}

@@ -1,0 +1,12 @@
+{
+  "nav":"home",
+  "sideBarContainer": {
+    "inventory": "inventory",
+    "payment": "payment",
+    "Factors":"Factors",
+    "tickets":"tickets"
+  },
+  "header": {
+
+  }
+}
