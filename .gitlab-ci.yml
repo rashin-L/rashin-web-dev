@@ -1,0 +1,18 @@
+image: docker:latest 
+stages: 
+  - build 
+  - deploy 
+build: 
+  stage: build 
+  script: 
+    - docker build -t rashin-web-dev . 
+  artifacts: 
+    paths: 
+      - rashin-web-dev.dockerfile 
+deploy: 
+  stage: deploy 
+  script: 
+    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" $DOCKER_REGISTRY 
+    - docker push $DOCKER_REGISTRY/rashin-web-dev 
+  only: 
+    - master 

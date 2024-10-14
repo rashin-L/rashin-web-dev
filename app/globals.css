@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    @font-face {
+        font-family: 'Yekan Bakh regular';
+        src: local('Yekan Bakh regular'), local('Yekan-Bakh-regular'),
+            /* url('../public/static/styles/fonts/Barlow/BarlowCondensed-Regular.ttf') format('woff2'); */
+            url('../public/fonts/bakh/woff2/YekanBakhFaNum-Regular.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Yekan Bakh bold';
+        src: local('Yekan Bakh bold'), local('Yekan-Bakh-bold'),
+            /* url('../public/static/styles/fonts/Barlow/BarlowCondensed-Regular.ttf') format('woff2'); */
+            url('../public/fonts/bakh/woff2/YekanBakhFaNum-Bold.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+    }
+     @font-face {
+        font-family: 'Yekan Bakh';
+        src: local('Yekan Bakh'), local('Yekan-Bakh'),
+            /* url('../public/static/styles/fonts/Barlow/BarlowCondensed-Regular.ttf') format('woff2'); */
+            url('../public/fonts/bakh/woff2/YekanBakhFaNum-ExtraBlack.woff2') format('woff2');
+
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+
+
+}
+.text-rtl{
+    direction: rtl !important;
+}
+
+.swiper-pagination-bullet {
+    color: aqua;
+}
+
+.css-riu05t{
+    z-index: 99 !important;
+    margin-bottom: 1rem !important;
+}
+
+.css-1sj2t5c{
+    position: absolute;
+    width: 12rem;
+}
+.MuiBox-root css-1yuhvjn{
+    height: 2rem !important;
+}
+.css-1yuhvjn{
+    margin-bottom: 2.5rem !important;
+}
+.css-1ph7gzu-MuiModal-root-MuiDrawer-root .MuiButton-root{
+margin-top: 0 !important;
+}
+.a.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorPrimary.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeSmall.MuiButton-textSizeSmall.MuiButton-colorPrimary.css-lw3mc8 {
+    margin-top: 0 !important;
+}
+
+

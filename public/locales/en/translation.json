@@ -1,0 +1,63 @@
+{
+  "layout": {
+    "nav": {
+      "home": "home",
+      "about": "about",
+      "projects": "projects",
+      "technologies": "technologies",
+      "contact": "contact"
+    }
+  },
+  "components": {
+    "hero": {
+      "hi": "Hi,",
+      "am":"i'am"
+    },
+    "herobotton": {
+      "cv": "View My CV"
+    },
+    "about": {
+      "about": "About Me",
+      "text": "Get the results you deserve with us"
+    },
+    "projects": {
+      "title": "Full Stack Projects",
+      "desc": "Showcasing My Solo Creations",
+      "team-title": "Team Projects",
+      "team-desc": "Team Exprience",
+      "detail": "Detail"
+
+    },
+    "project": {
+      "git": "Source Code",
+      "achieved": "Outcomes achieved",
+      "function": "My function in the project"
+    },
+    "technologies": {
+      "title": "Technologies",
+      "text": "Technologies i use to build my products"
+    },
+    "contact": {
+      "title": "Get in touch",
+      "text": "Ready to hear your opinions or start a constructive cooperation",
+      "first": "First Name",
+      "last": "Last Name",
+      "mobile": "Mobile Number",
+      "email": "Email address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit",
+      "errors": {
+        "name": "write your name please",
+        "complete_name": "complete your name",
+        "family": "write your family please",
+        "complete_family": "complete your family",
+        "email": "write your email please",
+        "invalid_email": "invalid email address",
+        "mobile": "invalid mobile number",
+        "subject": "write subject please",
+        "message": "write message please"
+      }
+    }
+  }
+}
